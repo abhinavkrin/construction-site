@@ -16,11 +16,13 @@ function Header({match}){
         <header>
             <Container fluid className="pl-2 pr-2">
                 <nav className="navbar">
-                    <div className="nav-brand">
-                        <img src={logo} alt={SITE_NAME} className="img-fluid nav-logo"/>
-                    </div>                    
-                    <div className="nav-btn">
-                        <IconButton icon="menu" onClick={()=>toggleShow(!show)}/>
+                    <div className="d-flex align-items-center">
+                        <div className="nav-brand">
+                            <img src={logo} alt={SITE_NAME} className="img-fluid nav-logo"/>
+                        </div>                    
+                        <div className="nav-btn">
+                            <IconButton icon="menu" onClick={()=>toggleShow(!show)}/>
+                        </div>
                     </div>
                     <div className={"nav-body "}>
                         <div className={"nav-menu"+(show?" show":"")}>

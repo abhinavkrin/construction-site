@@ -23,6 +23,8 @@ $primary:       #E04622;
 @import "../../../node_modules/bootstrap/scss/utilities";
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/carousel";
 
 button:focus{
     outline: none!important;
@@ -30,7 +32,15 @@ button:focus{
 .btn:focus{
     outline: none!important;
 }
+a {
+    color: $primary;
+    text-decoration: none;
+    background-color: transparent;
 
+}
+a:hover {
+    text-decoration: none;
+}
 @import './core.scss';
 
 
@@ -50,8 +60,8 @@ $primary: var(--primary);
     display: inline-block;
 }
 .nav-logo {
-    width: 96px;
-    height: auto;
+    width: auto;
+    height: 3rem;
 }
 
 .nav-menu {
@@ -81,9 +91,7 @@ $primary: var(--primary);
 }
 
 .nav-btn {
-    display: inline-block;
     position: absolute;
-    top: 1.4rem;
     right: 1.5rem;
     cursor: pointer;
 }
@@ -94,15 +102,13 @@ $primary: var(--primary);
         display: flex;
         width: 100%;
     }
+    .nav-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .nav-body {
         padding-right: 2rem;
-    }
-    .nav-brand {
-        padding: 0.5rem;
-    }
-    .nav-logo {
-        width: 96px;
-        height: auto;
     }
     
     .nav-body {
@@ -112,7 +118,7 @@ $primary: var(--primary);
     }
     .nav-link span {
         display: inline-block;
-        padding: 1rem;
+        padding: 1.4rem 1rem;
         font-size: 1.2rem;
     }
     .nav-link span:hover {
@@ -133,5 +139,106 @@ $primary: var(--primary);
     }
     .nav-menu.show {
         display: block;
+    }
+}
+
+
+//footer
+
+.footer {
+    background: #212529;
+    font-size: 0.9em;
+    padding: 0;
+    position: relative;
+    clear: both;
+    background: #E9EFF2 url(../images/footer-construction.jpg) no-repeat 50% 50%;
+    overflow: hidden;
+}
+
+.footer .list-footer-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer a:not(.btn):not(.no-footer-css) {
+    color: #777;
+    transition: all 0.1s ease-in-out;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer:hover a{
+    text-decoration: none;
+}
+
+.footer a:not(.btn):not(.no-footer-css):hover {
+    text-decoration: none;
+    color: #FFF;
+}
+@media (min-width: 768px){
+    .logo {
+        margin-top: 75px;
+    }
+}
+.footer h1, .footer h2, .footer h3, .footer h4, .footer a {
+    color: #333;
+}
+.footer .footer-copyright {
+    background: transparent;
+    margin: -10px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #FFF;
+}
+@media (min-width: 992px){
+    .footer:after {
+        background: #000 none repeat scroll 0 0;
+        bottom: -233px;
+        content: "";
+        height: 400px;
+        position: absolute;
+        right: -177px;
+        transform: rotate(50deg);
+        width: 400px;
+        z-index: 1;
+    }
+}
+
+//carousel
+.carousel-item {
+    position: relative;
+}
+.carousel-caption {
+    bottom: 40px;
+}
+.carousel-body {
+    background-color: adjust-color($color: theme-color('primary'), $alpha: -0.1);
+    position: absolute;
+    right: 0;
+    left: 20%;
+    text-align: right;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 80%;
+}
+.carousel-body h3 span{
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+}
+@media(max-width: 768px){
+    .carousel-img {
+        min-height: 50vh;
+        object-fit: cover;
+    }
+}
+
+@media(min-width: 769px){
+    .carousel-body {
+        background-color: adjust-color($color: theme-color('primary'), $alpha: -0.1);
+        position: absolute;
+        right: 0;
+        left: 40%;
+        text-align: right;
+        padding-right: 1rem;
+        max-width: 60%;
     }
 }
