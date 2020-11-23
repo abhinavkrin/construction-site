@@ -232,6 +232,7 @@ div.header-links {
     min-height: 300px;
     padding-bottom: 0;
     padding-right: 0!important;
+    z-index: 20;
 }
 .carousel-body .slide-title{
     margin-right: 1rem;
@@ -255,12 +256,12 @@ div.header-links {
     padding: 0.5rem;
     background-color: adjust-color($color: theme-color('secondary'), $alpha: -0.1);
     border: 1px solid adjust-color($color: theme-color('primary'), $alpha: -0.1);
-    z-index: 10;
 }
 .carousel-body .control-button:hover {
     cursor: pointer;
     color: $primary;
 }
+
 @media(max-width: 768px){
     .carousel-img {
         min-height: 50vh;
