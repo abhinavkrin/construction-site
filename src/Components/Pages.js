@@ -8,7 +8,7 @@ import Header from './Common/Header';
 const HomePage = lazy(() => import('./Home'));
 const AboutUsPage = lazy(() => import('./AboutUs'));
 const ServicesPage = lazy(() => import('./Services'));
-const ProjectsPage = lazy(() => import('./Projects'));
+const PortfolioPage = lazy(() => import('./Portfolio'));
 const ContactPage = lazy(() => import('./ContactPage'));
 
 export const Pages = [{
@@ -70,7 +70,7 @@ export const Pages = [{
                     <title>Our Portfolio | {SITE_NAME}</title>
                 </Helmet>
                 <Suspense fallback={<div/>}>
-                    <ProjectsPage/>
+                    <PortfolioPage/>
                 </Suspense>
             <Footer/>
         </>
