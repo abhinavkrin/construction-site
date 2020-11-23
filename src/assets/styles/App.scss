@@ -1,5 +1,6 @@
 // Custom.scss
 $primary:       #E04622;
+$secondary:  #0d182d;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -220,34 +221,79 @@ div.header-links {
     bottom: 40px;
 }
 .carousel-body {
-    background-color: adjust-color($color: theme-color('primary'), $alpha: -0.1);
-    position: absolute;
-    right: 0;
-    left: 20%;
-    text-align: right;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    max-width: 80%;
+    background-color: adjust-color($color: theme-color('secondary'), $alpha: -0.3);
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    padding-bottom: 0;
+    padding-right: 0!important;
 }
-.carousel-body h3 span{
+.carousel-body .slide-title{
+    margin-right: 1rem;
+    margin-left: 1rem;
     border-bottom: 2px solid white;
     padding-bottom: 2px;
+}
+.carousel-body .slide-body {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.carousel-body .controls {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: auto;
+}
+.carousel-body .control-button {
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: adjust-color($color: theme-color('secondary'), $alpha: -0.1);
+    border: 1px solid adjust-color($color: theme-color('primary'), $alpha: -0.1);
+    z-index: 10;
+}
+.carousel-body .control-button:hover {
+    cursor: pointer;
+    color: $primary;
 }
 @media(max-width: 768px){
     .carousel-img {
         min-height: 50vh;
         object-fit: cover;
     }
+    .carousel-indicators{
+        top: 10px;
+    }
 }
 
+
+
 @media(min-width: 769px){
+    .carousel-caption {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
     .carousel-body {
-        background-color: adjust-color($color: theme-color('primary'), $alpha: -0.1);
         position: absolute;
-        right: 0;
-        left: 40%;
-        text-align: right;
+        left: 0;
+        top: 0;
+        text-align: left;
         padding-right: 1rem;
-        max-width: 60%;
+        max-width: 38%;
+        height: 100%;
+    }
+    .carousel-body .controls {
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media(min-width: 1101px){
+    .carousel-body {
+        max-width: 30%;
     }
 }
