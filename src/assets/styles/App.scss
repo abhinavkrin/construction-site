@@ -48,6 +48,10 @@ a:hover {
 
 $primary: var(--primary);
 
+header {
+    background: #E9EFF2 url(../images/footer-construction.jpg) no-repeat 50% 50%;
+    background-position: center;
+}
 .navbar{
     width: 100%;
 }
@@ -65,18 +69,15 @@ $primary: var(--primary);
 }
 
 .nav-menu {
-    display: none;
+   // display: none;
     border-bottom: 2px solid var(--primary);
-}
-.nav-menu.show {
-    display: block;
 }
 .nav-link:hover{
     text-decoration: none;
 }
 .nav-link span {
     display: block;
-    padding: 1rem;
+    padding: 0.3rem;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -91,16 +92,26 @@ $primary: var(--primary);
 }
 
 .nav-btn {
-    position: absolute;
-    right: 1.5rem;
     cursor: pointer;
 }
 
-
+div.header-links {
+    //display: flex;
+    //flex-direction: column;
+    line-height: 1.4;
+    font-size: 0.8rem;
+}
+.header-links span {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
 @media (min-width: 768px) {
     .navbar{
         display: flex;
         width: 100%;
+    }
+    .collapse:not(.show).navbar-collapse {
+        display: flex!important;
     }
     .nav-brand {
         display: flex;
@@ -114,12 +125,14 @@ $primary: var(--primary);
     .nav-body {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        padding-left: 5rem;
+        justify-content: flex-start;
     }
     .nav-link span {
         display: inline-block;
-        padding: 1.4rem 1rem;
+        padding: 0.5rem 1rem;
         font-size: 1.2rem;
+        border-radius: 0.3rem 0.3rem 0 0;
     }
     .nav-link span:hover {
         background-color: lighten($color: theme-color("primary"), $amount: 40%);
@@ -134,11 +147,7 @@ $primary: var(--primary);
         display: none;
     }
     .nav-menu {
-        display: block;
         border: none;
-    }
-    .nav-menu.show {
-        display: block;
     }
 }
 

@@ -60,14 +60,14 @@ export const Pages = [{
         </>
     )
 },{
-    displayName: 'Projects',
-    path: routes.PROJECTS,
+    displayName: 'Our Portfolio',
+    path: routes.PORTFOLIO,
     exact: true,
     component: () => (
         <>
             <Header/>
                 <Helmet>
-                    <title>Projects | {SITE_NAME}</title>
+                    <title>Our Portfolio | {SITE_NAME}</title>
                 </Helmet>
                 <Suspense fallback={<div/>}>
                     <ProjectsPage/>

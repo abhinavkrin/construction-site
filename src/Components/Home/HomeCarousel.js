@@ -38,9 +38,9 @@ function HomeCarousel(){
         </Carousel.Item>
         )
     return (
-        <Carousel>
-            {carouselItems}            
-        </Carousel>
+    <Carousel>
+        {carouselItems}            
+    </Carousel>
     )
 }
 export default HomeCarousel;

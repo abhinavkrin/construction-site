@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/united-brothers-header.png';
 import { SITE_NAME } from '../../config';
-import { ABOUTUS, CONTACT, HOME, PROJECTS, SERVICES } from '../../routes';
+import { ABOUTUS, CONTACT, HOME, PORTFOLIO, SERVICES } from '../../routes';
 function Footer(){
     return (
         <footer className="footer">
@@ -10,7 +10,7 @@ function Footer(){
 					<div className="row pt-4 pb-4 text-center text-md-left">
 						<div className="col-md-3">
 							<a href="demo-construction.html">
-								<img alt={SITE_NAME} className="img-fluid logo" width="110" src={logo}/>
+								<img alt={SITE_NAME} className="img-fluid logo" width="220" src={logo}/>
 							</a>
 						</div>
 						<div className="col-md-4">
@@ -42,8 +42,8 @@ function Footer(){
 								<div className="col-6">
 									<ul className="list list-footer-nav">
 										<li>
-											<Link to={PROJECTS}>
-												Projects
+											<Link to={PORTFOLIO}>
+												Portfolio
 											</Link>
 										</li>
 										<li>
@@ -74,7 +74,7 @@ function Footer(){
 					<div className="footer-copyright">
 						<div className="row">
 							<div className="col-lg-12 text-center">
-								<p>© Copyright 2020. All Rights Reserved.</p>
+								<p>United Brothers Construction © Copyright 2020. All Rights Reserved.</p>
 							</div>
 						</div>
 					</div>

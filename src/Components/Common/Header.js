@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import logo from '../../assets/images/logo.png';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Collapse from 'react-bootstrap/Collapse';
+import headerLogo from '../../assets/images/united-brothers-header.png';
 import { SITE_NAME } from '../../config';
 import { Link, matchPath, withRouter } from 'react-router-dom';
-import { ABOUTUS, HOME,CONTACT , PROJECTS, SERVICES} from '../../routes';
+import { ABOUTUS, HOME,CONTACT , PORTFOLIO, SERVICES} from '../../routes';
 import { IconButton } from '@rmwc/icon-button';
 function Header({match}){
     const isActive = (route) => matchPath(match.path,{
@@ -14,46 +17,80 @@ function Header({match}){
     const [show,toggleShow] = useState(false);
     return (
         <header>
-            <Container fluid className="pl-2 pr-2">
-                <nav className="navbar">
-                    <div className="d-flex align-items-center">
-                        <div className="nav-brand">
-                            <img src={logo} alt={SITE_NAME} className="img-fluid nav-logo"/>
-                        </div>                    
-                        <div className="nav-btn">
-                            <IconButton icon="menu" onClick={()=>toggleShow(!show)}/>
-                        </div>
-                    </div>
-                    <div className={"nav-body "}>
-                        <div className={"nav-menu"+(show?" show":"")}>
-                            <Link to={HOME} className={"nav-link "+(isActive(HOME)?"active":"")}>
-                                <span>
-                                    Home
-                                </span>
-                            </Link>
-                            <Link to={ABOUTUS} className={"nav-link "+(isActive(ABOUTUS)?"active":"")}>
-                                <span>
-                                    Company
-                                </span>
-                            </Link>
-                            <Link to={SERVICES} className={"nav-link "+(isActive(SERVICES)?"active":"")}>
-                                <span>
-                                    Services
-                                </span>
-                            </Link>
-                            <Link to={PROJECTS} className={"nav-link "+(isActive(PROJECTS)?"active":"")}>
-                                <span>
-                                    Projects
-                                </span>
-                            </Link>
-                            <Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
-                                <span>
-                                    Contact
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
-                </nav>
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <Container>
+                            <Row className="pt-1 pb-1 pl-2 pr-2 d-flex align-items-center justify-content-center">
+                                <Col xs={12} md={6} className="d-flex justify-content-center">
+                                    <img src={headerLogo} alt={SITE_NAME} className="img-fluid"/>
+                                    <div className="d-flex align-items-center">                  
+                                        <div className="nav-btn">
+                                            <IconButton icon="menu" onClick={()=>toggleShow(!show)}/>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col xs={12} md={6}>
+                                    <Row>
+                                        <Col xs={12} className="d-flex flex-column justify-content-center text-center">
+                                            <span>
+                                                <strong>WHAT WE DO</strong>
+                                            </span>
+                                            <div className="header-links">
+                                                <span>
+                                                    <Link>Roofing Systems</Link>
+                                                </span>
+                                                <span>
+                                                    <Link>Exterior Building Restoration</Link>
+                                                </span>
+                                                <span>
+                                                    <Link>Our Portfolio</Link>
+                                                </span>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12} className="pl-2 pr-2" style={{borderBottom: "2px solid var(--primary)"}}>
+                        <Collapse in={show} className="navbar-collapse">
+                            <nav className="navbar">                            
+                                <div className={"nav-body "}>
+                                    <div className={"nav-menu"+(show?" show":"")}>
+                                        <Link to={HOME} className={"nav-link "+(isActive(HOME)?"active":"")}>
+                                            <span>
+                                                Home
+                                            </span>
+                                        </Link>
+                                        <Link to={SERVICES} className={"nav-link "+(isActive(SERVICES)?"active":"")}>
+                                            <span>
+                                                Services
+                                            </span>
+                                        </Link>
+                                        <Link to={PORTFOLIO} className={"nav-link "+(isActive(PORTFOLIO)?"active":"")}>
+                                            <span>
+                                                Portfolio
+                                            </span>
+                                        </Link>
+                                        <Link to={ABOUTUS} className={"nav-link "+(isActive(ABOUTUS)?"active":"")}>
+                                            <span>
+                                                About Us
+                                            </span>
+                                        </Link>
+                                        <Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
+                                            <span>
+                                                Contact
+                                            </span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </nav>
+                        </Collapse>
+                    </Col>
+                </Row>
             </Container>
         </header>
     )
