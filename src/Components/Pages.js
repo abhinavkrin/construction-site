@@ -1,17 +1,25 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { SITE_NAME, SITE_TAGELINE } from '../config';
 import * as routes from '../routes';
+import AboutUsPage from './AboutUs';
 import Footer from './Common/Footer';
 import Header from './Common/Header';
+import HomePage from './Home';
+import ServicesPage from './Services';
+import ExteriorRestorationPage from './Services/ExteriorRestorationPage';
+import RoofingPage from './Services/RoofingPage';
+import PortfolioPage from './Portfolio';
+import ContactPage from './ContactPage';
 
-const HomePage = lazy(() => import('./Home'));
-const AboutUsPage = lazy(() => import('./AboutUs'));
-const ServicesPage = lazy(() => import('./Services'));
-const RoofingPage = lazy(() => import('./Services/RoofingPage'));
-const ExteriorRestorationPage = lazy(() => import('./Services/ExteriorRestorationPage'));
-const PortfolioPage = lazy(() => import('./Portfolio'));
-const ContactPage = lazy(() => import('./ContactPage'));
+// const HomePage = lazy(() => import('./Home'));
+// const AboutUsPage = lazy(() => import('./AboutUs'));
+// const ServicesPage = lazy(() => import('./Services'));
+// const RoofingPage = lazy(() => import('./Services/RoofingPage'));
+// const ExteriorRestorationPage = lazy(() => import('./Services/ExteriorRestorationPage'));
+// const PortfolioPage = lazy(() => import('./Portfolio'));
+// const ContactPage = lazy(() => import('./ContactPage'));
+
 
 export const Pages = [{
     displayName: 'Home',
@@ -23,9 +31,7 @@ export const Pages = [{
             <Helmet>
                 <title>{SITE_NAME} | {SITE_TAGELINE}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <HomePage/>
-            </Suspense>
+            <HomePage/>
             <Footer/>
         </>
     )
@@ -39,9 +45,7 @@ export const Pages = [{
             <Helmet>
                 <title>AboutUs | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <AboutUsPage/>
-            </Suspense>
+            <AboutUsPage/>
             <Footer/>
         </>
     )
@@ -55,9 +59,7 @@ export const Pages = [{
             <Helmet>
                 <title>Our Services | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <ServicesPage/>
-            </Suspense>
+            <ServicesPage/>
             <Footer/>
         </>
     )
@@ -71,9 +73,7 @@ export const Pages = [{
             <Helmet>
                 <title>Roofing Service | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <RoofingPage/>
-            </Suspense>
+            <RoofingPage/>
             <Footer/>
         </>
     )
@@ -87,9 +87,7 @@ export const Pages = [{
             <Helmet>
                 <title>Exterior Building Restoration | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <ExteriorRestorationPage/>
-            </Suspense>
+            <ExteriorRestorationPage/>
             <Footer/>
         </>
     )
@@ -103,9 +101,7 @@ export const Pages = [{
             <Helmet>
                 <title>Our Portfolio | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <PortfolioPage/>
-            </Suspense>
+            <PortfolioPage/>
             <Footer/>
         </>
     )
@@ -119,9 +115,7 @@ export const Pages = [{
             <Helmet>
                 <title>Contact Us | {SITE_NAME}</title>
             </Helmet>
-            <Suspense fallback={<div/>}>
-                <ContactPage/>
-            </Suspense>
+            <ContactPage/>
             <Footer/>
         </>
     )
