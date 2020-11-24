@@ -45,6 +45,18 @@ a:hover {
 @import './core.scss';
 
 
+.content {
+    background: url('../images/city.svg') no-repeat 50% 100%;
+    background-size: contain;
+}
+
+@media(min-width: 768px){
+    .content {
+        background: url('../images/city.svg') no-repeat 50%;
+        background-size: auto;
+        background-attachment: fixed;
+    }
+}
 /* Header */
 
 $primary: var(--primary);
@@ -157,12 +169,13 @@ div.header-links {
 
 .footer {
     background: #212529;
-    font-size: 0.9em;
+    font-size: 1.2em;
     padding: 0;
     position: relative;
     clear: both;
     background: #E9EFF2 url(../images/footer-construction.jpg) no-repeat 50% 50%;
     overflow: hidden;
+    border-top: 1px solid $primary;
 }
 
 .footer .list-footer-nav {
@@ -174,7 +187,7 @@ div.header-links {
 .footer a:not(.btn):not(.no-footer-css) {
     color: #777;
     transition: all 0.1s ease-in-out;
-    font-size: 14px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 .footer:hover a{
@@ -197,6 +210,7 @@ div.header-links {
     background: transparent;
     margin: -10px 0 0;
     padding: 20px 0 0;
+    font-size: 14px;
     border-top: 1px solid #FFF;
 }
 @media (min-width: 992px){
@@ -214,6 +228,10 @@ div.header-links {
 }
 
 //carousel
+.carousel {
+    border: 3px solid adjust-color($color: theme-color('secondary'), $alpha: -0.1)!important;
+    border-radius: 0.2rem;
+}
 .carousel-item {
     position: relative;
 }
@@ -275,6 +293,9 @@ div.header-links {
 
 
 @media(min-width: 769px){
+    .carousel {
+        border: 5px solid adjust-color($color: theme-color('secondary'), $alpha: -0.1)!important;
+    }
     .carousel-caption {
         font-size: 1.1rem;
         font-weight: 300;

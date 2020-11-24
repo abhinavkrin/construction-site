@@ -23,7 +23,7 @@ const carouselData = [{
     body: "TheÂ Benjamin Maintenance portfolio showcases our prestigious list of clients and their properties.",
     image: portfolioThumb
 }]
-function HomeCarousel(){
-    return <CustomCarousel data={carouselData} />
+function HomeCarousel(props){
+    return <CustomCarousel data={carouselData} {...props}/>
 }
 export default HomeCarousel;

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-function CustomCarousel({data}){
+function CustomCarousel(props){
     
+    const data = props.data;
+
     const [currentSlide,setCurrentSlide] = useState(0);
 
     const next = () => {
@@ -34,7 +36,9 @@ function CustomCarousel({data}){
         </Carousel.Item>
         );
     return (
-    <Carousel controls={false} 
+    <Carousel 
+        className={props.className}
+        controls={false} 
         onSelect={i=>setCurrentSlide(i)}
         indicators={true}
         activeIndex={currentSlide}>
