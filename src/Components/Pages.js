@@ -8,6 +8,8 @@ import Header from './Common/Header';
 const HomePage = lazy(() => import('./Home'));
 const AboutUsPage = lazy(() => import('./AboutUs'));
 const ServicesPage = lazy(() => import('./Services'));
+const RoofingPage = lazy(() => import('./Services/RoofingPage'));
+const ExteriorRestorationPage = lazy(() => import('./Services/ExteriorRestorationPage'));
 const PortfolioPage = lazy(() => import('./Portfolio'));
 const ContactPage = lazy(() => import('./ContactPage'));
 
@@ -18,12 +20,12 @@ export const Pages = [{
     component: () => (
         <>
             <Header/>
-                <Helmet>
-                    <title>{SITE_NAME} | {SITE_TAGELINE}</title>
-                </Helmet>
-                <Suspense fallback={<div/>}>
-                    <HomePage/>
-                </Suspense>
+            <Helmet>
+                <title>{SITE_NAME} | {SITE_TAGELINE}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <HomePage/>
+            </Suspense>
             <Footer/>
         </>
     )
@@ -34,12 +36,12 @@ export const Pages = [{
     component: () => (
         <>
             <Header/>
-                <Helmet>
-                    <title>AboutUs | {SITE_NAME}</title>
-                </Helmet>
-                <Suspense fallback={<div/>}>
-                    <AboutUsPage/>
-                </Suspense>
+            <Helmet>
+                <title>AboutUs | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <AboutUsPage/>
+            </Suspense>
             <Footer/>
         </>
     )
@@ -50,12 +52,44 @@ export const Pages = [{
     component: () => (
         <>
             <Header/>
-                <Helmet>
-                    <title>Our Services | {SITE_NAME}</title>
-                </Helmet>
-                <Suspense fallback={<div/>}>
-                    <ServicesPage/>
-                </Suspense>
+            <Helmet>
+                <title>Our Services | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <ServicesPage/>
+            </Suspense>
+            <Footer/>
+        </>
+    )
+},{
+    displayName: 'Roofing Service',
+    path: routes.ROOFING_SERVICE,
+    exact: true,
+    component: () => (
+        <>
+            <Header/>
+            <Helmet>
+                <title>Roofing Service | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <RoofingPage/>
+            </Suspense>
+            <Footer/>
+        </>
+    )
+},{
+    displayName: 'Exterior Building Restoration',
+    path: routes.EXTERIOR_RESTORATION_PAGE,
+    exact: true,
+    component: () => (
+        <>
+            <Header/>
+            <Helmet>
+                <title>Exterior Building Restoration | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <ExteriorRestorationPage/>
+            </Suspense>
             <Footer/>
         </>
     )
@@ -66,12 +100,12 @@ export const Pages = [{
     component: () => (
         <>
             <Header/>
-                <Helmet>
-                    <title>Our Portfolio | {SITE_NAME}</title>
-                </Helmet>
-                <Suspense fallback={<div/>}>
-                    <PortfolioPage/>
-                </Suspense>
+            <Helmet>
+                <title>Our Portfolio | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <PortfolioPage/>
+            </Suspense>
             <Footer/>
         </>
     )
@@ -82,12 +116,12 @@ export const Pages = [{
     component: () => (
         <>
             <Header/>
-                <Helmet>
-                    <title>Contact Us | {SITE_NAME}</title>
-                </Helmet>
-                <Suspense fallback={<div/>}>
-                    <ContactPage/>
-                </Suspense>
+            <Helmet>
+                <title>Contact Us | {SITE_NAME}</title>
+            </Helmet>
+            <Suspense fallback={<div/>}>
+                <ContactPage/>
+            </Suspense>
             <Footer/>
         </>
     )
