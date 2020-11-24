@@ -1,10 +1,9 @@
 import React from 'react';
-import Switch from 'react-bootstrap/esm/Switch';
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { HOME } from '../routes';
 import { Pages } from './Pages';
 
-export default function MainComponent(){
+function MainComponent(){
     return (
         <div className="body">
            <Switch>
@@ -16,3 +15,5 @@ export default function MainComponent(){
         </div>
     )
 }
+
+export default withRouter(MainComponent);
