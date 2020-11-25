@@ -36,7 +36,7 @@ function Footer(){
                         <div className="col-md-1"/>
 						<div className="col-md-4">
                             <h5>SERVICE PAGES</h5>
-							<div className="row pl-4">
+							<div className="row pl-md-4">
 								<div className="col-12 mb-0">
 									<ul className="list list-footer-nav ml-3">
 										<li>
