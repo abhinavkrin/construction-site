@@ -65,14 +65,14 @@ function Header({match}){
                                                 Home
                                             </span>
                                         </Link>
-                                        <Link to={SERVICES} className={"nav-link "+(isActive(SERVICES)?"active":"")}>
-                                            <span>
-                                                Services
-                                            </span>
-                                        </Link>
                                         <Link to={PORTFOLIO} className={"nav-link "+(isActive(PORTFOLIO)?"active":"")}>
                                             <span>
                                                 Portfolio
+                                            </span>
+                                        </Link>
+                                        <Link to={SERVICES} className={"nav-link "+(isActive(SERVICES)?"active":"")}>
+                                            <span>
+                                                Our Services
                                             </span>
                                         </Link>
                                         <Link to={ABOUTUS} className={"nav-link "+(isActive(ABOUTUS)?"active":"")}>
