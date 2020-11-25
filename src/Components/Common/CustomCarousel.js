@@ -37,7 +37,7 @@ function CustomCarousel(props){
         );
     return (
     <Carousel 
-        className={props.className}
+        className={props.className+ " custom"}
         controls={false} 
         onSelect={i=>setCurrentSlide(i)}
         indicators={true}

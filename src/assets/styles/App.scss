@@ -27,6 +27,8 @@ $secondary:  #0d182d;
 @import "../../../node_modules/bootstrap/scss/transitions";
 @import "../../../node_modules/bootstrap/scss/carousel";
 
+
+@import 'react-responsive-carousel/lib/styles/carousel.min.css';
 button:focus{
     outline: none!important;
 }
@@ -64,6 +66,12 @@ $primary: var(--primary);
 header {
     background: #E9EFF2 url(../images/footer-construction.jpg) no-repeat 50% 50%;
     background-position: center;
+    
+    box-shadow:
+    0 1px 1.2px rgba(0, 0, 0, 0.034),
+    0 2px 2.3px rgba(0, 0, 0, 0.048),
+    0 5px 5px rgba(0, 0, 0, 0.06),
+    0 7px 7px rgba(0, 0, 0, 0.072);
 }
 .navbar{
     width: 100%;
@@ -228,18 +236,18 @@ div.header-links {
 }
 
 //carousel
-.carousel {
+.custom.carousel {
     border: 3px solid adjust-color($color: theme-color('secondary'), $alpha: -0.1)!important;
     border-radius: 0.2rem;
     transition: height 0.3s;
 }
-.carousel-item {
+.custom.carousel .carousel-item {
     position: relative;
 }
-.carousel-caption {
+.custom.carousel .carousel-caption {
     bottom: 40px;
 }
-.carousel-body {
+.custom.carousel .carousel-body {
     background-color: adjust-color($color: theme-color('secondary'), $alpha: -0.3);
     position: relative;
     left: 0;
@@ -253,40 +261,40 @@ div.header-links {
     padding-right: 0!important;
     z-index: 20;
 }
-.carousel-body .slide-title{
+.custom.carousel .carousel-body .slide-title{
     margin-right: 1rem;
     margin-left: 1rem;
     border-bottom: 2px solid white;
     padding-bottom: 2px;
 }
-.carousel-body .slide-body {
+.custom.carousel .carousel-body .slide-body {
     margin-right: 1rem;
     margin-left: 1rem;
 }
-.carousel-body .controls {
+.custom.carousel .carousel-body .controls {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin-top: auto;
 }
-.carousel-body .control-button {
+.custom.carousel .carousel-body .control-button {
     width: 50%;
     text-align: center;
     padding: 0.5rem;
     background-color: adjust-color($color: theme-color('secondary'), $alpha: -0.1);
     border: 1px solid adjust-color($color: theme-color('primary'), $alpha: -0.1);
 }
-.carousel-body .control-button:hover {
+.custom.carousel .carousel-body .control-button:hover {
     cursor: pointer;
     color: $primary;
 }
 
 @media(max-width: 768px){
-    .carousel-img {
+    .custom.carousel .carousel-img {
         min-height: 50vh;
         object-fit: cover;
     }
-    .carousel-indicators{
+    .custom.carousel .carousel-indicators{
         top: 10px;
     }
 }
@@ -294,14 +302,14 @@ div.header-links {
 
 
 @media(min-width: 769px){
-    .carousel {
+    .custom.carousel {
         border: 5px solid adjust-color($color: theme-color('secondary'), $alpha: -0.1)!important;
     }
-    .carousel-caption {
+    .custom.carousel .carousel-caption {
         font-size: 0.8rem;
         font-weight: 300;
     }
-    .carousel-body {
+    .custom.carousel .carousel-body {
         position: absolute;
         left: 0;
         top: 0;
@@ -311,13 +319,13 @@ div.header-links {
         max-width: 38%;
         height: 100%;
     }
-    .carousel-body .controls {
+    .custom.carousel .carousel-body .controls {
         position: sticky;
         bottom: 0;
     }
 }
 @media(min-width: 1101px){
-    .carousel-body {
+    .custom.carousel .carousel-body {
         max-width: 30%;
     }
 }
@@ -366,4 +374,32 @@ div.header-links {
 }
 .service-card:hover .service-card-img {
     opacity: 0.5;
+}
+
+#portfolio-content {
+    background: rgba(255, 255, 255, 0.930);
+    padding: 1rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;  
+}
+
+#portfolio-content h2 {
+    color: $primary;
+}
+.carousel.carousel-slider{
+    margin: auto;
+}
+.carousel .control-arrow {
+    background-color: $primary;
+}
+
+.carousel .slide .legend {
+    background: $primary;
+    opacity: 0.8;
 }
