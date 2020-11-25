@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ABOUTUS, HOME } from '../../routes';
+import { EXTERIOR_RESTORATION_PAGE, ROOFING_SERVICE } from '../../routes';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -40,12 +40,12 @@ function Footer(){
 								<div className="col-12 mb-0">
 									<ul className="list list-footer-nav ml-3">
 										<li>
-											<Link to={HOME}>
+											<Link to={ROOFING_SERVICE}>
 												Roofing Systems
 											</Link>
 										</li>
 										<li>
-											<Link to={ABOUTUS}>
+											<Link to={EXTERIOR_RESTORATION_PAGE}>
 												Exterior Building Restoration
 											</Link>
 										</li>
