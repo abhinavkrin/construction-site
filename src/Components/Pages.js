@@ -11,6 +11,7 @@ import ExteriorRestorationPage from './Services/ExteriorRestorationPage';
 import RoofingPage from './Services/RoofingPage';
 import PortfolioPage from './Portfolio';
 import ContactPage from './ContactPage';
+import OurFacilityPage from './AboutUs/OurFacilityPage';
 
 // const HomePage = lazy(() => import('./Home'));
 // const AboutUsPage = lazy(() => import('./AboutUs'));
@@ -46,6 +47,20 @@ export const Pages = [{
                 <title>AboutUs | {SITE_NAME}</title>
             </Helmet>
             <AboutUsPage/>
+            <Footer/>
+        </>
+    )
+},{
+    displayName: 'Our Facility',
+    path: routes.FACILITY,
+    exact: true,
+    component: () => (
+        <>
+            <Header/>
+            <Helmet>
+                <title>Our Facility | {SITE_NAME}</title>
+            </Helmet>
+            <OurFacilityPage/>
             <Footer/>
         </>
     )

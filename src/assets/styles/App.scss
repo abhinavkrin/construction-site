@@ -47,6 +47,11 @@ a:hover {
 }
 @import './core.scss';
 
+.alignleft {
+    float: left;
+    height: auto;
+    margin: 0px 20px 10px 0;
+}
 
 .content {
     background: url('../images/city.svg') no-repeat 50% 100%;
@@ -390,6 +395,7 @@ div.header-links {
     border-radius: 5px;  
 }
 
+
 #portfolio-content h2 {
     color: $primary;
 }
@@ -412,4 +418,30 @@ div.header-links {
 .carousel .slide .legend {
     background: $primary;
     opacity: 0.8;
+}
+
+.post-content {
+    background: rgba(255, 255, 255, 0.930);
+    padding: 1rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;  
+}
+.post-content h1 {
+    color: $primary;
+}
+.custom-post {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 768px){
+    .custom-post{
+        flex-direction: row;
+    }
 }
