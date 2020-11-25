@@ -30,13 +30,13 @@ function Header({match}){
                                         </div>
                                     </div>
                                 </Col>
-                                <Col xs={12} md={6}>
+                                <Col xs={12} md={6} className="pr-md-5">
                                     <Row>
-                                        <Col xs={12} className="d-flex flex-column justify-content-center text-center">
-                                            <span>
-                                                <strong>WHAT WE DO</strong>
-                                            </span>
+                                        <Col xs={12} className="d-flex flex-column justify-content-center text-center mr-md-5 pr-md-5">
                                             <div className="header-links">
+                                                <span>
+                                                    <strong>WHAT WE DO</strong>
+                                                </span>
                                                 <span>
                                                     <Link>Roofing Systems</Link>
                                                 </span>
@@ -58,8 +58,8 @@ function Header({match}){
                     <Col xs={12} className="pl-2 pr-2" style={{borderBottom: "2px solid var(--primary)"}}>
                         <Collapse in={show} className="navbar-collapse">
                             <nav className="navbar">                            
-                                <div className={"nav-body "}>
-                                    <div className={"nav-menu"+(show?" show":"")}>
+                                <div className="nav-body">
+                                    <div className={"nav-menu offset-md-1 pl-md-5"+(show?" show":"")}>
                                         <Link to={HOME} className={"nav-link "+(isActive(HOME)?"active":"")}>
                                             <span>
                                                 Home

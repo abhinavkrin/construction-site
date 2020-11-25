@@ -123,14 +123,18 @@ header {
 }
 
 div.header-links {
-    //display: flex;
-    //flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     line-height: 1.4;
     font-size: 0.8rem;
+    text-align: center;
 }
 .header-links span {
-    display: inline-block;
+    display: block;
     padding: 0 0.5rem;
+    width: 100%;
 }
 @media (min-width: 768px) {
     .navbar{
@@ -157,8 +161,8 @@ div.header-links {
     }
     .nav-link span {
         display: inline-block;
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
         border-radius: 0.3rem 0.3rem 0 0;
     }
     .nav-link span:hover {
@@ -175,6 +179,20 @@ div.header-links {
     }
     .nav-menu {
         border: none;
+    }
+    div.header-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        line-height: 1.4;
+        font-size: 0.8rem;
+        text-align: right!important;
+    }
+    .header-links span {
+        display: block;
+        padding: 0 0.5rem;
+        width: 100%;
     }
 }
 
