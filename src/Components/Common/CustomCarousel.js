@@ -26,7 +26,7 @@ function CustomCarousel(props){
             alt="First slide"
             />
             <Carousel.Caption className="carousel-body">
-                <h3 className="slide-title"><span>{item.title}</span></h3>
+                <h5 className="slide-title"><span>{item.title}</span></h5>
                 <p className="slide-body">{item.body}</p>
                 <div className="controls">
                     <div className="control-button" onClick={prev}>Previous</div>
