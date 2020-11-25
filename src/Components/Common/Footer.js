@@ -1,36 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ABOUTUS, HOME } from '../../routes';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 function Footer(){
     return (
         <footer className="footer">
             <div className="container">
 					<div className="row pt-4 pb-4 text-center text-md-left">
 
-						<div className="col-md-5 offset-md-1">
-							<h4>Contact Us</h4>
+						<div className="col-md-4 offset-md-1">
+							<h5>CONTACT US</h5>
 
-							<p>
-                                Benjamin Maintenance<br/>
-                                104 22nd Street<br/>
-                                Brooklyn, NY 11232<br/>
-                                <i className="fas fa-phone"></i> 212-535-8500 (NYC) <br/>
-                                <i className="fas fa-phone"></i> 718-439-1200 (Brooklyn) <br/>
-                                <i className="fas fa-phone"></i> 718-492-0194 (Fax) <br/>
-                                <i className="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> 
-                            </p>
+							<Container>
+                                <Row className="pl-4">
+                                    <Col xs={"auto"}>
+                                        <strong className="title text-primary">ADDRESS</strong>
+                                    </Col>
+                                    <Col>
+                                    <p className="address">
+                                        Benjamin Maintenance<br/>
+                                        104 22nd Street<br/>
+                                        Brooklyn, NY 11232<br/>
+                                        <i className="fas fa-phone"></i> 212-535-8500 (NYC) <br/>
+                                        <i className="fas fa-phone"></i> 718-439-1200 (Brooklyn) <br/>
+                                        <i className="fas fa-phone"></i> 718-492-0194 (Fax) <br/>
+                                        <a href="mailto:mail@example.com"><i className="far fa-envelope"></i> mail@example.com</a> 
+                                    </p>
+                                    </Col>
+                                </Row>
+                            </Container>
 
 						</div>
-
+                        <div className="col-md-1"/>
 						<div className="col-md-4">
-							<div className="row">
-								<div className="col-lg-6 mb-2">
-									<h4>Service Pages</h4>
-								</div>
-							</div>
-							<div className="row">
+                            <h5>SERVICE PAGES</h5>
+							<div className="row pl-4">
 								<div className="col-12 mb-0">
-									<ul className="list list-footer-nav">
+									<ul className="list list-footer-nav ml-3">
 										<li>
 											<Link to={HOME}>
 												Roofing Systems

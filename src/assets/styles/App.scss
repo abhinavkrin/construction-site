@@ -201,13 +201,12 @@ div.header-links {
 
 .footer {
     background: #212529;
-    font-size: 1.2em;
     padding: 0;
     position: relative;
     clear: both;
     background: #E9EFF2 url(../images/footer-construction.jpg) no-repeat 50% 50%;
     overflow: hidden;
-    border-top: 1px solid $primary;
+    border-top: 2px solid $primary;
 }
 
 .footer .list-footer-nav {
@@ -216,10 +215,13 @@ div.header-links {
     padding: 0;
 }
 
+.list-footer-nav li{
+    margin-bottom: 0;
+}
+
 .footer a:not(.btn):not(.no-footer-css) {
-    color: #777;
+    color: $primary;//#777;
     transition: all 0.1s ease-in-out;
-    font-size: 1.2rem;
     text-decoration: none;
 }
 .footer:hover a{
@@ -228,21 +230,37 @@ div.header-links {
 
 .footer a:not(.btn):not(.no-footer-css):hover {
     text-decoration: none;
-    color: #FFF;
+    color: darken($color: theme-color('primary'), $amount: 15%);//#FFF;
 }
 @media (min-width: 768px){
     .logo {
         margin-top: 75px;
     }
 }
-.footer h1, .footer h2, .footer h3, .footer h4, .footer a {
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5,.footer h6, .footer a {
+    color: #333;
+}
+
+.footer h5 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    background: url(./../images/widget-title-footer.png) repeat;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    color: #203039;
+    text-shadow: 0 1px 0 #fff;
+}
+.footer .address {
+    font-size: 13px;
+}
+.footer .title{
+    font-size: 15px;
     color: #333;
 }
 .footer .footer-copyright {
     background: transparent;
     margin: -10px 0 0;
     padding: 20px 0 0;
-    font-size: 14px;
     border-top: 1px solid #FFF;
 }
 @media (min-width: 992px){
