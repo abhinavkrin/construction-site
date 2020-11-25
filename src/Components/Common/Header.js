@@ -6,7 +6,7 @@ import Collapse from 'react-bootstrap/Collapse';
 import headerLogo from '../../assets/images/united-brothers-header.png';
 import { SITE_NAME } from '../../config';
 import { Link, matchPath, withRouter } from 'react-router-dom';
-import { ABOUTUS, HOME,CONTACT , PORTFOLIO, SERVICES, ROOFING_SERVICE, EXTERIOR_RESTORATION_PAGE} from '../../routes';
+import { ABOUTUS, HOME , PORTFOLIO, SERVICES, ROOFING_SERVICE, EXTERIOR_RESTORATION_PAGE} from '../../routes';
 import { IconButton } from '@rmwc/icon-button';
 function Header({match}){
     const isActive = (route) => {
@@ -32,7 +32,7 @@ function Header({match}){
                         <Container>
                             <Row className="pt-1 pb-1 pl-2 pr-2 d-flex align-items-center justify-content-center">
                                 <Col xs={12} md={6} className="d-flex justify-content-center">
-                                    <img src={headerLogo} alt={SITE_NAME} className="img-fluid"/>
+                                    <Link to={HOME}><img src={headerLogo} alt={SITE_NAME} className="img-fluid"/></Link>
                                     <div className="d-flex align-items-center">                  
                                         <div className="nav-btn">
                                             <IconButton icon="menu" onClick={()=>toggleShow(!show)}/>
@@ -89,11 +89,11 @@ function Header({match}){
                                                 About Us
                                             </span>
                                         </Link>
-                                        <Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
+                                        {/* {<Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
                                             <span>
                                                 Contact
                                             </span>
-                                        </Link>
+                                        </Link>} */}
                                     </div>
                                 </div>
                             </nav>
