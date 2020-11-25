@@ -9,10 +9,19 @@ import { Link, matchPath, withRouter } from 'react-router-dom';
 import { ABOUTUS, HOME,CONTACT , PORTFOLIO, SERVICES} from '../../routes';
 import { IconButton } from '@rmwc/icon-button';
 function Header({match}){
-    const isActive = (route) => matchPath(match.path,{
-        path: route,
-        exact: true
-    });
+    const isActive = (route) => {
+        if(route === HOME){
+            return matchPath(match.path,{
+                path: route,
+                exact: true
+            });
+        } else {
+            return matchPath(match.path,{
+                path: route,
+                exact: false
+            });
+        }
+    }
 
     const [show,toggleShow] = useState(false);
     return (

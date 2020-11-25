@@ -105,7 +105,7 @@ function RoofingPage(){
                     </Col>
                     <Col xs={12} lg={7} className="mt-3">
                         <div id="portfolio-content">
-                            <h2>Roofing Projects</h2>
+                            <h3>Roofing Projects</h3>
                             <div class="entry">	
                                 <p><strong>Benjamin Maintenance Corp.</strong>, has consistently maintained unusually high standards and an enviable position in its work performance record,covering many and diverse projects in the Metropolitan New York City area.</p>
                                 <p>Our principals set out with a prior expertise in their craft and the premise that through hard work and the maintenance of the highest standards of excellence on every project, success would be realized. To ensure those high quality standards, each project has been closely and personally supervised by at least one of our partners. Our carefully selected and experienced craftsmen in the field all share our guide-lines and goals, and consequently we have been able to maintain our objectives since the beginning, with the results being precisely as planned.</p>
