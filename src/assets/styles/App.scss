@@ -242,6 +242,7 @@ ul.dropdown-content li.active {
         display: block;
         padding: 0 0.5rem;
         width: 100%;
+        line-height: 1.6em;
     }
     .nav-body .dropdown-container {
         position: relative;
@@ -280,6 +281,10 @@ ul.dropdown-content li.active {
         width: 100%;
         padding: 0.3rem 0.5rem;
         border-bottom: 1px solid $primary;//rgba(255, 255, 255, 0.404);
+    }
+    
+    .upper-header {
+        padding: 25px 0!important;
     }
 }
 

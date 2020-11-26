@@ -30,7 +30,7 @@ function Header({match}){
                 <Row>
                     <Col>
                         <Container>
-                            <Row className="pt-1 pb-1 pl-2 pr-2 d-flex align-items-center justify-content-center">
+                            <Row className="pt-1 pb-1 pl-2 pr-2 p-md-0  d-flex align-items-center justify-content-center upper-header">
                                 <Col xs={12} md={6} className="d-flex justify-content-center">
                                     <Link to={HOME}><img src={headerLogo} alt={SITE_NAME} className="img-fluid"/></Link>
                                     <div className="d-flex align-items-center">                  
@@ -44,7 +44,7 @@ function Header({match}){
                                         <Col xs={12} className="d-flex flex-column justify-content-center text-center mr-md-5 pr-md-5">
                                             <div className="header-links">
                                                 <span>
-                                                    <strong>WHAT WE DO</strong>
+                                                    <strong style={{lineHeight: "2em", fontSize: "14px"}}>WHAT WE DO</strong>
                                                 </span>
                                                 <span>
                                                     <Link to={ROOFING_SERVICE}>Roofing Systems</Link>
