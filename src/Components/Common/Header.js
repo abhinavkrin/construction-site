@@ -6,7 +6,7 @@ import Collapse from 'react-bootstrap/Collapse';
 import headerLogo from '../../assets/images/united-brothers-header.png';
 import { SITE_NAME } from '../../config';
 import { Link, matchPath, withRouter } from 'react-router-dom';
-import { ABOUTUS, HOME , PORTFOLIO, SERVICES, ROOFING_SERVICE, EXTERIOR_RESTORATION_PAGE, FACILITY} from '../../routes';
+import { ABOUTUS, HOME , PORTFOLIO, SERVICES, ROOFING_SERVICE, EXTERIOR_RESTORATION_PAGE, FACILITY, CONTACT} from '../../routes';
 import { IconButton } from '@rmwc/icon-button';
 function Header({match}){
     const isActive = (route) => {
@@ -111,11 +111,11 @@ function Header({match}){
                                                 </Link>
                                             </ul>
                                         </div>
-                                        {/* {<Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
+                                        <Link to={CONTACT} className={"nav-link "+(isActive(CONTACT)?"active":"")}>
                                             <span>
                                                 Contact
                                             </span>
-                                        </Link>} */}
+                                        </Link>
                                     </div>
                                 </div>
                             </nav>
