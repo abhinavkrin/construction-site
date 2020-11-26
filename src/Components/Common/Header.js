@@ -63,8 +63,8 @@ function Header({match}){
                         </Container>
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs={12} className="pl-2 pr-2" style={{borderBottom: "2px solid var(--primary)"}}>
+                <Row className="nav-row">
+                    <Col xs={12} className="pl-2 pr-2">
                         <Collapse in={show} className="navbar-collapse">
                             <nav className="navbar">                            
                                 <div className="nav-body">

@@ -16,7 +16,7 @@ function ServicesPage(){
                     
                 </Row>
                 <Row>
-                    <Col xs={12} md={6} lg={5} className="offset-lg-1 d-flex justify-content-center">
+                    <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
                         <Link to={ROOFING_SERVICE}>
                             <div className="service-card">
                                 <img className="service-card-img" src={roofingCardImg} alt="Roofing Projects"/>
@@ -26,12 +26,22 @@ function ServicesPage(){
                             </div>
                         </Link>
                     </Col>
-                    <Col xs={12} md={6} lg={5} className="d-flex justify-content-center">
+                    <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
                         <Link to={EXTERIOR_RESTORATION_PAGE}>
                             <div className="service-card">
                                 <img className="service-card-img" src={exteriorCardImg} alt="Roofing Projects"/>
                                 <div className="service-card-title">
                                     <Link to={EXTERIOR_RESTORATION_PAGE}>Exterior Building Restoration</Link>
+                                </div>
+                            </div>
+                        </Link>
+                    </Col>
+                    <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
+                        <Link to={EXTERIOR_RESTORATION_PAGE}>
+                            <div className="service-card">
+                                <img className="service-card-img" src={roofingCardImg} alt="Roofing Projects"/>
+                                <div className="service-card-title">
+                                    <Link to={EXTERIOR_RESTORATION_PAGE}>Sample Project</Link>
                                 </div>
                             </div>
                         </Link>

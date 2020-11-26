@@ -115,7 +115,7 @@ function ExteriorRestorationPage(){
                     <Col xs={12} lg={7} className="mt-3">
                         <div id="portfolio-content">
                             <h3>Exterior Building Restoration</h3>                  
-                            <div class="entry">	
+                            <div className="entry">	
                                 <p><strong>Benjamin Maintenance</strong> understands the importance of fully identifying each challenge, offering on-site analysis and recommendations for solutions. And we have the expertise to do so with accuracy. We also employ only quality material, state-of-the-art procedures and sound craftsmanship as basic essentials for our solutions.</p>
                                 <p><strong>WATERPROOFING/RESTORATION<br/></strong> Benjamin Maintenance locates the source of water infiltration and recommends cost-effective remedies. Sometimes just a sealant or coating is needed, more often repointing, recaulking and reconstruction. Our work consists of all repairs from replacing aluminum cappings and other elements to complete curtain wall restorations.</p>
                                 <p>Restoration is occasionally cosmetic, dealing with applications of various coatings, or repair and replacement of masonry, ornate or sculptured details, usually on older or landmark structures. We call on our various sources of craftsmen and artisans in rebuilding, replacing and repairing, utilizing steel pinning, epoxies and other procedures.</p>

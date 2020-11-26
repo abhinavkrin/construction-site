@@ -1,5 +1,5 @@
 // Custom.scss
-$primary:       #E04622;
+$primary:       #731010;//#E04622;
 $secondary:  #0d182d;
 
 // $secondary:     $gray-600 !default;
@@ -107,10 +107,12 @@ header {
     padding: 0.25rem;
     font-size: 1rem;
     text-align: center;
+    color: #fff;
 }
 .nav-link span:hover {
-    background-color: lighten($color: theme-color("primary"), $amount: 40%);
+    background-color: adjust-color($color: theme-color("primary"), $alpha: -0.5);
     color: darken($color: theme-color("primary"), $amount: 10%);
+    color: #fff;
 }
 
 .nav-link.active span {
@@ -121,7 +123,12 @@ header {
 .nav-btn {
     cursor: pointer;
 }
-
+.nav-row {
+    background-color: #1f1f1f;
+    background-color: $secondary;//#a80000;
+    border-bottom: 2px solid var(--primary);
+    border-top: 2px solid var(--primary);
+}
 div.header-links {
     display: flex;
     flex-direction: column;
@@ -130,11 +137,13 @@ div.header-links {
     line-height: 1.4;
     font-size: 0.8rem;
     text-align: center;
+    display: none;
 }
 .header-links span {
     display: block;
     padding: 0 0.5rem;
     width: 100%;
+    font-size: 11px;
 }
 @media (min-width: 768px) {
     .navbar{
@@ -163,13 +172,7 @@ div.header-links {
         display: inline-block;
         padding: 0.3rem 1rem;
         font-size: 1rem;
-        border-radius: 0.3rem 0.3rem 0 0;
-    }
-    .nav-link span:hover {
-        background-color: lighten($color: theme-color("primary"), $amount: 40%);
-        color: darken($color: theme-color("primary"), $amount: 10%);
-    }
-    
+    }    
     .nav-link.active span {
         background-color: var(--primary);
         color: #fff;
@@ -251,11 +254,11 @@ div.header-links {
     text-shadow: 0 1px 0 #fff;
 }
 .footer .address {
-    font-size: 13px;
+    font-size: 11px;
     text-align: left;
 }
 .footer .title{
-    font-size: 15px;
+    font-size: 13px;
     color: #333;
 }
 
@@ -418,7 +421,7 @@ div.header-links {
 }
 
 .service-card .service-card-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 0.5rem 0.5rem 0;
     text-align: center;
 }
