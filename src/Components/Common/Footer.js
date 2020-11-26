@@ -38,7 +38,7 @@ function Footer(){
                             <h5>SERVICE PAGES</h5>
 							<div className="row pl-md-4">
 								<div className="col-12 mb-0">
-									<ul className="list list-footer-nav ml-3">
+									<ul className="list list-footer-nav ml-md-3">
 										<li>
 											<Link to={ROOFING_SERVICE}>
 												Roofing Systems
@@ -47,6 +47,30 @@ function Footer(){
 										<li>
 											<Link to={EXTERIOR_RESTORATION_PAGE}>
 												Exterior Building Restoration
+											</Link>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div className="d-md-none col-md-4 mt-2">
+                            <h5>WHAT WE DO</h5>
+							<div className="row pl-md-4">
+								<div className="col-12 mb-0">
+									<ul className="list list-footer-nav ml-md-3">
+										<li>
+											<Link to={ROOFING_SERVICE}>
+												Roofing Systems
+											</Link>
+										</li>
+										<li>
+											<Link to={EXTERIOR_RESTORATION_PAGE}>
+												Exterior Building Restoration
+											</Link>
+										</li>
+										<li>
+											<Link to={EXTERIOR_RESTORATION_PAGE}>
+												Our Portfolio
 											</Link>
 										</li>
 									</ul>

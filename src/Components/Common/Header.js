@@ -87,7 +87,7 @@ function Header({match}){
                                         <div className={"nav-link dropdown-container "+(isActive(SERVICES)?"active":"")}>
                                             <Link to={SERVICES}>
                                                 <span>
-                                                    Our Services
+                                                    Our Services <i className="fas fa-caret-down"></i>
                                                 </span>
                                             </Link>
                                             <ul className="dropdown-content">
@@ -102,7 +102,7 @@ function Header({match}){
                                         <div className={"nav-link dropdown-container "+(isActive(ABOUTUS)?"active":"")}>
                                             <Link to={ABOUTUS}>
                                                 <span>
-                                                    About Us
+                                                    About Us <i className="fas fa-caret-down"></i>
                                                 </span>
                                             </Link>
                                             <ul className="dropdown-content">
