@@ -36,7 +36,7 @@ function TextField({onChange,value,placeholder,id,style,label,maxLength}){
                     maxLength={maxLength}
                     onFocus={e => setActive(e.target, true)}
                     />
-                <label for={id} className="form-field__label">{label}</label>
+                <label htmlFor={id} className="form-field__label">{label}</label>
                 <div className="form-field__bar"></div>
             </div>
         </div>

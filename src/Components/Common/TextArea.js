@@ -18,16 +18,16 @@ function TextArea({onChange,value,placeholder,id,style,label,maxLength}){
     const ref = useRef();
     
     return (
-        <div class="form-field" 
+        <div className="form-field" 
             style={style}
             onClick={e=>{
                 if(ref.current){
                     ref.current.focus();
                 }
             }}>
-            <div class="form-field__control">
+            <div className="form-field__control">
                 <textarea id={id} 
-                    class="form-field__textarea" 
+                    className="form-field__textarea" 
                     value={value}
                     ref={ref} 
                     placeholder={placeholder} 
@@ -35,8 +35,8 @@ function TextArea({onChange,value,placeholder,id,style,label,maxLength}){
                     maxLength={maxLength}
                     onBlur={(e) => setActive(e.target, false)}
                     onFocus={e => setActive(e.target, true)}></textarea>
-                <label for={id} class="form-field__label">{label}</label>
-                <div class="form-field__bar"></div>
+                <label htmlFor={id} className="form-field__label">{label}</label>
+                <div className="form-field__bar"></div>
             </div>
         </div>
     )
