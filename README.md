@@ -81,4 +81,53 @@ Your app is ready to be deployed!
 
 After you build this project, the production files are available in `build` folder. Copy the content of `build` folder to the server root / .
 
+## Project Structure
+The source code of the project are in **src** directory.
 
+### Pages
+All the pages, are defined in **src/Components/Pages.js** file. Define urls in **src/routes.js**.
+
+````
+const Pages = [...
+ {
+    displayName: 'Home',
+    path: routes.HOME,
+    exact: true,
+    component: () => (
+        <>
+            <Header/>
+            <Helmet>
+                <title>{SITE_NAME} | {SITE_TAGELINE}</title>
+            </Helmet>
+            <HomePage/>
+            <Footer/>
+        </>
+    )
+}...
+
+]
+````
+While you can find codes for pages in their individual directory named after the page.
+
+````
+src
+  ∟ Components
+      ∟ AboutUs
+          ∟ index.js
+          ∟ OurFacilityPage.js
+      ∟ ContactPage
+          ∟ index.js
+      ∟ Home
+          ∟ index.js
+          ∟ HomeCarousel.js
+      ∟ Portfolio
+          ∟ index.js
+          ∟ PortfolioCarousel.js
+      ∟ Services
+          ∟ index.js
+          ∟ ExteriorRestorationPage.js
+          ∟ RoofingPage.js
+````
+
+**Assets**
+All the project assets are located in **src/Assets** directory
