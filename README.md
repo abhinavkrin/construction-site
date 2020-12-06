@@ -1,6 +1,56 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built on ReactJS and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The files generated are static, so the website can be served over a cdn. This will bring down the cost of hosting.
+
+## Setting up the project.
+
+### Required softwares
+1. Download and install **nodejs** from [here](https://nodejs.org/en/download/)
+2. Download and Install **yarn** package manager from [here](https://classic.yarnpkg.com/en/docs/install/)
+
+### Downloading the project:
+
+1. Clone git repo
+````
+git clone https://github.com/abhinavkrin/construction-site.git
+````
+2. Download the zip file from the github [https://github.com/abhinavkrin/construction-site](https://github.com/abhinavkrin/construction-site).  Extract it.
+
+### Installing dependencies
+1. Change current directory to the project directory **construction-site** and run:
+
+````
+yarn install
+````
+The project is now set up.
+
+### Start the Development server
+
+To see live changes to the code edits, start the development server.
+
+````
+yarn start
+````
+### Edit the config file
+In the **src/config.js**, you will find the following variables. Change them according to your need.
+```
+export const SITE_NAME = "Pro Construction";
+export const SITE_TAGELINE = "Best Construction Company"
+export const CONTACT_MESSAGE_POST_URL = "https://url-to-post-message/";
+```
+
+### The contact form
+The contact form contents are posted to the **CONTACT_MESSAGE_POST_URL** (defined in src/config.js file) with the follwing fields: **name** , **email**, **message** as **multipart/form-data**
+
+### Build the project
+
+To build the project run
+
+````
+yarn build
+````
+
+All the build files are created in the **build** folder.
 
 ## Available Scripts
 
@@ -27,44 +77,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+After you build this project, the production files are available in `build` folder. Copy the content of `build` folder to the server root / .
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
