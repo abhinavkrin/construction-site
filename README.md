@@ -129,5 +129,5 @@ src
           ∟ RoofingPage.js
 ````
 
-**Assets**
+### Assets
 All the project assets are located in **src/Assets** directory
